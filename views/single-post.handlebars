@@ -1,0 +1,17 @@
+<section class="single-post-container">
+    {{> post-info post}}
+    {{#if loggedIn}}
+    <div class="comment-container">
+        <h2 class="card-header"></h2>
+        <form class="card-body comment-form" id="comment-form">
+            <div class="form-row">
+                <label class="form-label">Comment</label>
+                <input class="form-input" id="comment" name="comment-body"/>
+            </div>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+    {{/if}}
+    {{> comments post.comments}}
+</section>
+{{#if loggedIn}}
